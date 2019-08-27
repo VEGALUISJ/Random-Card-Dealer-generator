@@ -5,9 +5,25 @@ import "file-loader?name=[name].[ext]!../index.html";
 import "../style/index.scss";
 
 window.onload = function() {
-  let figureup = ["&#9829", "&#9830"];
+  let a = ["3", "8", "5", "J", "K", "A"];
 
-  let arriba = figureup[Math.floor(Math.random() * figureup.length)];
+  let number = a[Math.floor(Math.random() * a.length)];
 
-  console.log("arriba");
+  document.getElementById("var2").innerHTML = number;
+
+  let b = ["&#9829", "&#9830", "&#9827", "&#9824"];
+
+  let symbol = b[Math.floor(Math.random() * b.length)];
+
+  if (symbol = "&#9829"){
+    document.getElementById("var1").style.color = "red";
+    document.getElementById("var3").style.color = "red";
+  }
+
+
+  document.getElementById("var1").innerHTML = symbol;
+  document.getElementById("var3").innerHTML = symbol;
+
+  console.log(number);
+  console.log(symbol);
 };
