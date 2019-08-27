@@ -15,12 +15,6 @@ window.onload = function() {
 
   let symbol = b[Math.floor(Math.random() * b.length)];
 
-  if (symbol = "&#9829"){
-    document.getElementById("var1").style.color = "red";
-    document.getElementById("var3").style.color = "red";
-  }
-
-
   document.getElementById("var1").innerHTML = symbol;
   document.getElementById("var3").innerHTML = symbol;
 
