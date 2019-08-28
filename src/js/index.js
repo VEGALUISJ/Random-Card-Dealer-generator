@@ -15,8 +15,16 @@ window.onload = function() {
 
   let symbol = b[Math.floor(Math.random() * b.length)];
 
-  document.getElementById("var1").innerHTML = symbol;
-  document.getElementById("var3").innerHTML = symbol;
+  let up = document.getElementById("var1");
+  let down = document.getElementById("var3");
+
+  if (symbol === "&#9829" || symbol === "&#9830") {
+    up.classList.toggle("TEMP");
+    down.classList.toggle("TEMP");
+  }
+
+  up.innerHTML = symbol;
+  down.innerHTML = symbol;
 
   console.log(number);
   console.log(symbol);
