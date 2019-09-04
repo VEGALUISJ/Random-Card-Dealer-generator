@@ -4,13 +4,22 @@ import "file-loader?name=[name].[ext]!../index.html";
 //import 'breathecode-dom'; //DOM override to make JS easier to use
 import "../style/index.scss";
 
-window.onload = function() {
-  let a = ["3", "8", "5", "J", "K", "A"];
+window.onclick = function() {
+  document.getElementById("var2").innerHTML = generatenumber();
+  document.getElementById("var1").innerHTML = generateicon();
+  document.getElementById("var3").innerHTML = generateicon();
+  console.log("Hello World!! ");
+};
+
+var generatenumber = function() {
+  let a = ["2", "3", "4", "5", "6", "7", "8", "9", "J", "Q", "K", "A"];
 
   let number = a[Math.floor(Math.random() * a.length)];
 
-  document.getElementById("var2").innerHTML = number;
+  return number;
+};
 
+var generateicon = function() {
   let b = ["&#9829", "&#9830", "&#9827", "&#9824"];
 
   let symbol = b[Math.floor(Math.random() * b.length)];
@@ -26,6 +35,5 @@ window.onload = function() {
   up.innerHTML = symbol;
   down.innerHTML = symbol;
 
-  console.log(number);
-  console.log(symbol);
+  return symbol;
 };
